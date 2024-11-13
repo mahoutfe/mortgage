@@ -1,0 +1,29 @@
+@import './reset';
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import './button';
+
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	background-color: $main-color;
+	color: $black;
+	font-size: 14px;
+}
+
+a {
+	color: $white;
+	opacity: 70%;
+	transition: color 0.2s ease-in;
+
+	&:hover {
+		opacity: 100%;
+	}
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1270px;
+}
