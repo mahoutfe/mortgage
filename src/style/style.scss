@@ -1,7 +1,7 @@
 @import './reset';
 @import './variables';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
-@import './button';
+@import './mixins';
 
 body {
 	font-family: 'Roboto', sans-serif;
@@ -12,18 +12,24 @@ body {
 	font-size: 14px;
 }
 
-a {
-	color: $white;
-	opacity: 70%;
-	transition: color 0.2s ease-in;
-
-	&:hover {
-		opacity: 100%;
-	}
+p {
+	color: $black;
+	font-size: 14px;
+	line-height: 24px;
+	opacity: 50%;
 }
 
 .container {
 	margin: 0 auto;
 	padding: 0 15px;
 	max-width: 1270px;
+
+	&--wide {
+		width: 100%;
+		max-width: 1367px;
+	}
+}
+
+.no-scroll {
+	overflow-y: hidden;
 }

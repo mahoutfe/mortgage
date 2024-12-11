@@ -1,0 +1,110 @@
+@import './variables.scss';
+
+@mixin ctaButtonStyle {
+	border-radius: 4px;
+	height: 56px;
+	font-weight: 700;
+	font-size: 16px;
+	transition: all 0.2s ease-in;
+}
+
+.playButton {
+	position: relative;
+	width: 44px;
+	height: 44px;
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 60px; // Диаметр пульсирующих кругов
+		height: 60px;
+		border-radius: 50%;
+		background-color: rgba(39, 143, 180, 0.8); // Полупрозрачный цвет
+		transform: translate(-50%, -50%) scale(0);
+		animation: pulse-animation 2s infinite;
+	}
+
+	&::after {
+		animation-delay: 1s;
+	}
+}
+
+.playIcon {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: relative;
+	width: 44px;
+	height: 44px;
+	border: none;
+	border-radius: 50%;
+	font-size: 20px;
+	cursor: pointer;
+	text-align: center;
+	line-height: 44px; // Центрируем текст вертикально
+	transition: background-color 0.15s;
+	z-index: 1; // Чтобы кнопка была выше пульсирующих кругов
+
+	&:hover {
+		transform: translate(-50%, -50%) scale(1.1);
+		filter: saturate(1.4);
+	}
+}
+
+@keyframes pulse-animation {
+	0% {
+		transform: translate(-50%, -50%) scale(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(-50%, -50%) scale(1);
+		opacity: 0.4;
+	}
+}
+
+// cta buttons
+.ctaButtons {
+	display: flex;
+	align-items: center;
+	gap: 24px;
+}
+
+.ctaPrimaryButton {
+	position: relative;
+	@include ctaButtonStyle;
+	width: 200px;
+	background-color: $accent;
+	color: $white;
+
+	&::before {
+		content: '';
+		position: absolute;
+		right: 29px;
+		top: 50%;
+		width: 20px;
+		height: 12px;
+		transform: translate(0%, -50%);
+
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url('./../resources/img/header/arrow.svg');
+	}
+
+	&:hover {
+		background-color: saturate($accent, 30%);
+	}
+}
+
+.ctaSecondaryButton {
+	@include ctaButtonStyle;
+	border: 1px solid rgba($title-color, 0.3);
+	width: 181px;
+	color: $title-color;
+
+	&:hover {
+		border: 1.8px solid rgba($title-color, 0.7);
+	}
+}

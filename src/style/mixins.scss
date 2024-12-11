@@ -1,0 +1,30 @@
+@import './variables';
+
+// миксин для пульсации
+
+// миксин для прямоугольных кнопок, взять из btn
+
+// миксин для круглых кнопок, отличие только в ссылке на картинку
+
+// Пример создания и подключения
+// .benefits {
+// 	position: relative;
+// 	padding: 120px 0;
+
+// 	@mixin decorNumber { // создание
+// 		position: absolute;
+// 		top: 0;
+// 		line-height: 1.15;
+
+// 		opacity: 0.02;
+// 		font-size: 400px;
+// 		font-family: $font-accent;
+// 	}
+
+// 	::after {
+// 		content: 'II';
+// 		left: calc(50% + 555px);
+// 		transform: translate(-50%, 0%);
+// 		@include decorNumber; // подключение
+// 	}
+// }
