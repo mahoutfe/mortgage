@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import './../../style/variables.scss';
 
 @mixin ctaButtonStyle {
 	border-radius: 4px;
@@ -90,7 +90,7 @@
 
 		background-repeat: no-repeat;
 		background-position: center;
-		background-image: url('./../resources/img/header/arrow.svg');
+		background-image: url('./../../resources/img/header/arrow.svg');
 	}
 
 	&:hover {

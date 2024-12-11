@@ -6,7 +6,7 @@ import logo from './../../../resources/img/logo.svg';
 import './../../../style/style.scss';
 import './../../../style/mixins.scss';
 import styles from './Header.module.scss';
-import buttonsStyles from './../../../style/Buttons.module.scss';
+import buttonsStyles from './../../buttons/Buttons.module.scss';
 
 const Header = () => {
 	const clgGetStarted = () => {
@@ -20,25 +20,27 @@ const Header = () => {
 		<header className={styles.header}>
 			<div className='container container--wide'>
 				<div className={styles.headerWrapper}>
+					<MenuButton />
 					<div className={styles.imageContainer}>
 						<img src={headerImage} alt='' />
-						<MenuButton />
-						<div className={styles.videoContent}>
-							<div className={styles.videoTitle}>
-								Why a mortgage is so much more
-								<br />
-								than just a rate?
-							</div>
-							<div className={styles.playButtonWrapper}>
-								<div className={buttonsStyles.playButton}>
-									<div className={buttonsStyles.playIcon}>
-										<a href='https://www.youtube.com/watch?v=_NNHdTTbzB8&t=1806s'>
-											<img src={playBlue} alt='Play button' />
-										</a>
-									</div>
+						<div className={styles.videoWrapper}>
+							<div className={styles.videoContent}>
+								<div className={styles.videoTitle}>
+									Why a mortgage is so much more
+									<br />
+									than just a rate?
 								</div>
+								<div className={styles.playButtonWrapper}>
+									<div className={buttonsStyles.playButton}>
+										<div className={buttonsStyles.playIcon}>
+											<a href='https://www.youtube.com/watch?v=_NNHdTTbzB8&t=1806s'>
+												<img src={playBlue} alt='Play button' />
+											</a>
+										</div>
+									</div>
 
-								<div className={styles.videoDuration}>0:34</div>
+									<div className={styles.videoDuration}>0:34</div>
+								</div>
 							</div>
 						</div>
 					</div>

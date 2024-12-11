@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './../../style/style.scss';
 import './MenuButton.module.scss';
 import styles from './MenuButton.module.scss';
+import logo from './../../resources/img/logo.svg';
 
 const MenuButton = () => {
 	const [isActive, setIsActive] = useState(false);
@@ -44,14 +45,21 @@ const MenuButton = () => {
 					</nav>
 				</div>
 			</div>
-			<div className={styles.navBtn} onClick={onClick}>
-				<button className={styles.navIconBtn}>
-					<div
-						className={`${styles.navIcon} ${
-							isActive ? styles.navIconActive : ''
-						}`}
-					></div>
-				</button>
+			<div className={styles.menuHeader}>
+				<div className={styles.navBtn} onClick={onClick}>
+					<button className={styles.navIconBtn}>
+						<div
+							className={`${styles.navIcon} ${
+								isActive ? styles.navIconActive : ''
+							}`}
+						></div>
+					</button>
+				</div>
+				<div className={`${styles.logo} ${isActive ? styles.logoActive : ''}`}>
+					<a href='#!'>
+						<img src={logo} alt='NEW AMERICAN funding' />
+					</a>
+				</div>
 			</div>
 		</div>
 	);
