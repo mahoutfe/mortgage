@@ -1,3 +1,4 @@
+import React from 'react';
 import Footer from '../../components/MortgageDesign/footer/Footer';
 import Education from '../../components/MortgageDesign/education/Education';
 import Header from '../../components/MortgageDesign/header/Header';

@@ -1,5 +1,11 @@
-import ButtonRectangle from '../../buttons/Buttons';
+import React from 'react';
+import {
+	ButtonRectangle,
+	CtaButtonsWrapper,
+	PlayButton,
+} from '../../buttons/Buttons';
 import MenuButton from '../../buttons/MenuButton';
+
 import playBlue from './../../../resources/img/buttonsImg/play-blue.svg';
 import headerImage from './../../../resources/img/header/header-image.jpg';
 import logo from './../../../resources/img/logo.svg';
@@ -9,13 +15,6 @@ import styles from './Header.module.scss';
 import buttonsStyles from './../../buttons/Buttons.module.scss';
 
 const Header = () => {
-	const clgGetStarted = () => {
-		console.log('get started');
-	};
-	const scheduleAtime = () => {
-		console.log('schedule');
-	};
-
 	return (
 		<header className={styles.header}>
 			<div className='container container--wide'>
@@ -31,13 +30,7 @@ const Header = () => {
 									than just a rate?
 								</div>
 								<div className={styles.playButtonWrapper}>
-									<div className={buttonsStyles.playButton}>
-										<div className={buttonsStyles.playIcon}>
-											<a href='https://www.youtube.com/watch?v=_NNHdTTbzB8&t=1806s'>
-												<img src={playBlue} alt='Play button' />
-											</a>
-										</div>
-									</div>
+									<PlayButton />
 
 									<div className={styles.videoDuration}>0:34</div>
 								</div>
@@ -64,25 +57,20 @@ const Header = () => {
 								(Pssst...it's not just about clicking a button)
 							</p>
 						</div>
-						<div className={styles.ctaGroup}>
+						{/* <div className={styles.ctaGroup}>
 							<div className={styles.ctaHeading}>
 								Let us help you create
 								<br />
 								your mortgage journey
 							</div>
-							<div className={buttonsStyles.ctaButtons}>
-								<ButtonRectangle
-									className={buttonsStyles.ctaPrimaryButton}
-									text='Get started'
-									onClick={clgGetStarted}
-								/>
-								<ButtonRectangle
-									className={buttonsStyles.ctaSecondaryButton}
-									text='Schedule a time'
-									onClick={scheduleAtime}
-								/>
-							</div>
-						</div>
+						</div> */}
+						<CtaButtonsWrapper
+							text={
+								<p className={buttonsStyles.ctaHeading}>
+									Let us help you create your mortgage journey
+								</p>
+							}
+						/>
 					</div>
 				</div>
 			</div>

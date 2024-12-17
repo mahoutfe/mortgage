@@ -1,11 +1,5 @@
 @import './../../style/variables';
-// @import '././../../style/style';
-
-@mixin mediaTablet {
-	@media screen and (max-width: $tablet) {
-		@content;
-	}
-}
+@import '././../../style/style';
 
 .headerMenu {
 	display: none;
@@ -30,24 +24,38 @@
 	background-color: rgba(135, 135, 135, 0.6);
 	z-index: -1;
 }
-
-.nav {
-	display: block;
+.contentWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: $white;
+	padding-left: 100px;
+	padding-right: 100px;
+	opacity: 1;
 	width: 50%;
 	height: 100%;
-	background-color: $white;
-	opacity: 1;
-	padding-top: 138px;
-	padding-bottom: 89px;
+
+	@include mediaNetbook {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+}
+.nav {
+	display: block;
+	padding: 138px 0 0 0;
 	z-index: 10;
+
+	@include mediaNetbook {
+		padding: 120px 0 0 0;
+	}
 }
 
 .navList {
 	display: flex;
 	flex-direction: column;
-	gap: 36px;
-	margin-left: 100px;
+	row-gap: 36px;
 	background-color: $white;
+	padding-bottom: 15px;
 
 	a {
 		color: $title-color;
@@ -55,13 +63,13 @@
 		font-size: 22px;
 		line-height: 127%;
 	}
+
+	@include mediaNetbook {
+		padding-left: 27px;
+		row-gap: 20px;
+	}
 }
 
-// .header__nav {
-// 	@include mediaTablet {
-// 		display: none;
-// 	}
-// }
 .menuHeader {
 	position: absolute;
 	top: 24px;

@@ -26,8 +26,12 @@ p {
 	max-width: 1270px;
 
 	&--wide {
-		width: 100%;
-		max-width: 1367px;
+		// width: 100%;
+		max-width: 1366px;
+
+		@mixin mediaMobile {
+			max-width: 1270px;
+		}
 	}
 }
 
