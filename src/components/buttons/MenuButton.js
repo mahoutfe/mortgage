@@ -49,7 +49,9 @@ const MenuButton = () => {
 								</li>
 							</ul>
 						</nav>
-						<CtaButtonsWrapper />
+						<div className={styles.ctaButtonsContainer}>
+							<CtaButtonsWrapper />
+						</div>
 					</div>
 				</div>
 			</div>

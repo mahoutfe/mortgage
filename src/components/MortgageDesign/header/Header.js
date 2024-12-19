@@ -19,8 +19,8 @@ const Header = () => {
 		<header className={styles.header}>
 			<div className='container container--wide'>
 				<div className={styles.headerWrapper}>
-					<MenuButton />
 					<div className={styles.imageContainer}>
+						<MenuButton />
 						<img src={headerImage} alt='' />
 						<div className={styles.videoWrapper}>
 							<div className={styles.videoContent}>
@@ -57,20 +57,12 @@ const Header = () => {
 								(Pssst...it's not just about clicking a button)
 							</p>
 						</div>
-						{/* <div className={styles.ctaGroup}>
-							<div className={styles.ctaHeading}>
-								Let us help you create
-								<br />
-								your mortgage journey
-							</div>
-						</div> */}
-						<CtaButtonsWrapper
-							text={
-								<p className={buttonsStyles.ctaHeading}>
-									Let us help you create your mortgage journey
-								</p>
-							}
-						/>
+						<div className={styles.ctaGroup}>
+							<p className={styles.ctaHeading}>
+								Let us help you create your mortgage journey
+							</p>
+							<CtaButtonsWrapper />
+						</div>
 					</div>
 				</div>
 			</div>

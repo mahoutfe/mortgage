@@ -4,18 +4,43 @@
 .header {
 }
 .headerWrapper {
-	position: relative;
+	// position: relative;
 	display: flex;
-	justify-content: center;
-	gap: 24px;
+	justify-content: space-between;
+	gap: 48px;
+	height: 100%;
+
+	@include mediaNetbook {
+		gap: 24px;
+	}
 
 	@include mediaTablet {
+		gap: 15px;
+	}
+
+	@include mediaMobile {
 		flex-direction: column;
 		align-items: center;
 	}
 }
 .imageContainer {
+	position: relative;
+	// max-width: 586px;
+	height: auto;
+	flex-shrink: 0;
+	width: 43.86%;
+
+	@include mediaMobile {
+		width: 100%;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
 }
+
 .videoWrapper {
 	position: relative;
 }
@@ -52,8 +77,18 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	width: 703px;
+	flex-grow: 1;
+	// width: 703px;
+	width: 100%;
 	padding: 37px 0 0 0;
+}
+
+.logo {
+	display: block;
+
+	@include mediaMobile {
+		display: none;
+	}
 }
 
 .description {
@@ -73,10 +108,77 @@
 	@include mediaNetbook {
 		font-size: 40px;
 	}
+	@include mediaTablet {
+		font-size: 30px;
+	}
+	@include mediaMobile {
+		font-size: 40px;
+		text-align: center;
+	}
+
+	@media screen and (max-width: 530px) {
+		font-size: 30px;
+	}
 }
 .highlight {
 	color: $accent;
 }
+.ctaGroup {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	column-gap: 42px;
+	padding: 10px 0;
+	height: 110px;
 
+	@include mediaNetbook {
+		column-gap: 24px;
+	}
+
+	@media screen and (max-width: 1140px) {
+		flex-wrap: wrap;
+	}
+
+	@include mediaMobile {
+		justify-content: center;
+	}
+}
+.ctaGroup::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 1px;
+	background-color: $gray;
+	opacity: 0.2;
+}
 .subtitle {
+	@include mediaMobile {
+		text-align: center;
+	}
+}
+
+.ctaHeading {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	opacity: 1;
+
+	color: $black;
+	font-size: 18px;
+	font-weight: 700;
+	width: 184px;
+
+	@include mediaNetbook {
+		width: 100%;
+		// flex-basis: 75%;
+		// margin-bottom: 0;
+		font-size: 14px;
+	}
+
+	@include mediaMobile {
+		text-align: center;
+	}
 }

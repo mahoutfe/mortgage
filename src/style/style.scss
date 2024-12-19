@@ -10,7 +10,6 @@ body {
 	background-color: $main-color;
 	color: $black;
 	font-size: 14px;
-	opacity: 1;
 }
 
 p {
@@ -26,12 +25,12 @@ p {
 	max-width: 1270px;
 
 	&--wide {
-		// width: 100%;
-		max-width: 1366px;
+		width: 100%;
+		max-width: 1367px;
 
-		@mixin mediaMobile {
-			max-width: 1270px;
-		}
+		// @include mediaTablet {
+		// 	max-width: 1270px;
+		// }
 	}
 }
 

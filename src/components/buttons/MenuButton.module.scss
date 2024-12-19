@@ -29,15 +29,25 @@
 	flex-direction: column;
 	justify-content: space-between;
 	background-color: $white;
-	padding-left: 100px;
-	padding-right: 100px;
+	padding: 0 100px;
+
 	opacity: 1;
-	width: 50%;
+	width: 100%;
 	height: 100%;
 
 	@include mediaNetbook {
-		padding-left: 40px;
-		padding-right: 40px;
+		padding: 0 25px;
+	}
+
+	@include mediaTablet {
+		position: fixed;
+		z-index: 9;
+		left: 0px;
+		top: 0px;
+		width: 100%;
+		height: 100%;
+		justify-content: flex-start;
+		align-items: center;
 	}
 }
 .nav {
@@ -70,6 +80,11 @@
 	}
 }
 
+.ctaButtonsContainer {
+	padding: 10px 0;
+	height: 21.53%;
+}
+
 .menuHeader {
 	position: absolute;
 	top: 24px;
@@ -77,14 +92,6 @@
 	display: flex;
 	justify-content: start;
 	align-items: center;
-}
-
-.logo {
-	display: none;
-	z-index: 12;
-}
-.logoActive {
-	display: block;
 }
 
 .navBtn {
@@ -150,4 +157,11 @@
 
 .navIcon.navIconActive::after {
 	transform: rotate(-45deg);
+}
+.logo {
+	display: none;
+	z-index: 12;
+}
+.logoActive {
+	display: block;
 }
