@@ -22,6 +22,28 @@ const MenuButton = () => {
 		<div>
 			<div>
 				<div
+					className={`${styles.menuHeader} ${
+						isActive ? styles.menuHeaderActive : ''
+					}`}
+				>
+					<div className={styles.navBtn} onClick={onClick}>
+						<button className={styles.navIconBtn}>
+							<div
+								className={`${styles.navIcon} ${
+									isActive ? styles.navIconActive : ''
+								}`}
+							></div>
+						</button>
+					</div>
+					<div
+						className={`${styles.logo} ${isActive ? styles.logoActive : ''}`}
+					>
+						<a href='#!'>
+							<img src={logo} alt='NEW AMERICAN funding' />
+						</a>
+					</div>
+				</div>
+				<div
 					className={`${styles.headerMenu} ${
 						isActive ? styles.headerMenuActive : ''
 					}`}
@@ -53,22 +75,6 @@ const MenuButton = () => {
 							<CtaButtonsWrapper />
 						</div>
 					</div>
-				</div>
-			</div>
-			<div className={styles.menuHeader}>
-				<div className={styles.navBtn} onClick={onClick}>
-					<button className={styles.navIconBtn}>
-						<div
-							className={`${styles.navIcon} ${
-								isActive ? styles.navIconActive : ''
-							}`}
-						></div>
-					</button>
-				</div>
-				<div className={`${styles.logo} ${isActive ? styles.logoActive : ''}`}>
-					<a href='#!'>
-						<img src={logo} alt='NEW AMERICAN funding' />
-					</a>
 				</div>
 			</div>
 		</div>

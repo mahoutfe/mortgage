@@ -12,7 +12,6 @@ import logo from './../../../resources/img/logo.svg';
 import './../../../style/style.scss';
 import './../../../style/mixins.scss';
 import styles from './Header.module.scss';
-import buttonsStyles from './../../buttons/Buttons.module.scss';
 
 const Header = () => {
 	return (

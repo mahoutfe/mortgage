@@ -11,7 +11,11 @@ body {
 	color: $black;
 	font-size: 14px;
 }
-
+.app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 p {
 	color: $black;
 	font-size: 14px;
@@ -26,11 +30,11 @@ p {
 
 	&--wide {
 		width: 100%;
-		max-width: 1367px;
+		max-width: 1440px;
 
-		// @include mediaTablet {
-		// 	max-width: 1270px;
-		// }
+		@media screen and (max-width: 1270px) {
+			max-width: 1270px;
+		}
 	}
 }
 

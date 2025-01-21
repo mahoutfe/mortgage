@@ -1,0 +1,52 @@
+@import './../../../style/variables';
+$block-width: 512px;
+.teamSection {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+.sectionTitle {
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 167%;
+	color: $title-color;
+	text-align: center;
+}
+.sectionSubtitle {
+	font-size: 18px;
+	text-align: center;
+	color: $black;
+	opacity: 0.5;
+	padding-bottom: 65px;
+}
+.teamMembers {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1088px;
+	margin: 0 auto;
+	gap: calc((100% - (#{$block-width * 2})) / 3);
+}
+.teamMember {
+	width: $block-width;
+	padding: 0 34px;
+}
+.memberPhoto {
+}
+.memberInfo {
+}
+.role {
+}
+.name {
+}
+.description {
+}
+.skillsContainer {
+}
+.skillsGrid {
+}
+.skillItem {
+}
+.skillIcon {
+}
+.skillName {
+}
