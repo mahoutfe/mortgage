@@ -1,8 +1,9 @@
 @import './../../../style/variables';
-$block-width: 512px;
+
 .teamSection {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	width: 100%;
 }
 .sectionTitle {
@@ -22,15 +23,23 @@ $block-width: 512px;
 .teamMembers {
 	display: flex;
 	justify-content: space-between;
-	max-width: 1088px;
 	margin: 0 auto;
-	gap: calc((100% - (#{$block-width * 2})) / 3);
+	width: 100%;
+	max-width: 1088px;
 }
 .teamMember {
-	width: $block-width;
+	width: 100%;
+	max-width: 512px;
 	padding: 0 34px;
 }
+.imageWrapper {
+}
+
 .memberPhoto {
+}
+.videoButton {
+}
+.videoTitle {
 }
 .memberInfo {
 }

@@ -1,12 +1,7 @@
 import React from 'react';
-import {
-	ButtonRectangle,
-	CtaButtonsWrapper,
-	PlayButton,
-} from '../../buttons/Buttons';
+import { CtaButtonsWrapper, PlayButton } from '../../buttons/Buttons';
 import MenuButton from '../../buttons/MenuButton';
 
-import playBlue from './../../../resources/img/buttonsImg/play-blue.svg';
 import headerImage from './../../../resources/img/header/header-image.jpg';
 import logo from './../../../resources/img/logo.svg';
 import './../../../style/style.scss';

@@ -2,14 +2,13 @@
 @import './../../../style/style';
 
 .header {
+	margin-bottom: 104.4px;
 }
 .headerWrapper {
-	// position: relative;
 	display: flex;
 	justify-content: space-between;
 	gap: 48px;
 	height: 100%;
-	margin-bottom: 104.4px;
 
 	@include mediaNetbook {
 		gap: 24px;

@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
-import {
-	ButtonRectangle,
-	CtaButtonsWrapper,
-	PlayButton,
-} from '../../components/buttons/Buttons.js';
+import { CtaButtonsWrapper } from '../../components/buttons/Buttons.js';
 
+import logo from './../../resources/img/logo.svg';
 import './../../style/style.scss';
 import './MenuButton.module.scss';
 import styles from './MenuButton.module.scss';
-import logo from './../../resources/img/logo.svg';
 
 const MenuButton = () => {
 	const [isActive, setIsActive] = useState(false);
@@ -22,8 +18,8 @@ const MenuButton = () => {
 		<div>
 			<div>
 				<div
-					className={`${styles.menuHeader} ${
-						isActive ? styles.menuHeaderActive : ''
+					className={`${styles.headerMenu} ${
+						isActive ? styles.headerMenuActive : ''
 					}`}
 				>
 					<div className={styles.navBtn} onClick={onClick}>
@@ -43,11 +39,7 @@ const MenuButton = () => {
 						</a>
 					</div>
 				</div>
-				<div
-					className={`${styles.headerMenu} ${
-						isActive ? styles.headerMenuActive : ''
-					}`}
-				>
+				<div className={`${styles.menu} ${isActive ? styles.menuActive : ''}`}>
 					<div className={styles.contentWrapper}>
 						<nav className={styles.nav}>
 							<ul className={styles.navList}>

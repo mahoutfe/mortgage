@@ -1,26 +1,28 @@
 import React from 'react';
-import Footer from '../../components/MortgageDesign/footer/Footer';
-import Education from '../../components/MortgageDesign/education/Education';
 import Header from '../../components/MortgageDesign/header/Header';
 import TeamSection from '../../components/MortgageDesign/teamSection/TeamSection';
-import Reviews from '../../components/MortgageDesign/reviews/Reviews';
-import Strategy from '../../components/MortgageDesign/strategy/Strategy';
-// import './../../style/style.scss';
+import PageStrategy from '../../components/MortgageDesign/strategy/Strategy';
+import PageReviews from '../../components/MortgageDesign/reviews/Reviews';
+import PageEducation from '../../components/MortgageDesign/education/Education';
+import Footer from '../../components/MortgageDesign/footer/Footer';
+
+import './../../style/style.scss';
+import styles from './App.module.scss';
 
 const App = () => {
 	return (
-		<div className='app'>
-			<Header />
-			<TeamSection />
-			{/* <ButtonPlay /> */}
-			{/* <PageMentors />
-				<PageStrategy />
-				<PageReviews />
-				<PageEducation /> */}
-			{/* </main> */}
-
-			{/* <Footer /> */}
-		</div>
+		<main className={styles.app}>
+			<div className='content'>
+				<Header />
+				<div className='container'>
+					<TeamSection />
+					<PageStrategy />
+					<PageReviews />
+					<PageEducation />
+					<Footer />
+				</div>
+			</div>
+		</main>
 	);
 };
 

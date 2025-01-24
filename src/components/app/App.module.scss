@@ -1,0 +1,11 @@
+.app {
+	height: 100vh;
+	overflow-y: scroll;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	max-width: 1440px;
+	margin: 0 auto;
+}
