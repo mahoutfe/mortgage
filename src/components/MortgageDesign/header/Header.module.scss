@@ -156,6 +156,7 @@
 	opacity: 0.2;
 }
 .subtitle {
+	opacity: 0.5;
 	@include mediaMobile {
 		text-align: center;
 	}

@@ -1,6 +1,7 @@
 import React from 'react';
 import buttonsStyles from './Buttons.module.scss';
 import playBlue from './../../resources/img/buttonsImg/play-blue.svg';
+import playWhite from './../../resources/img/buttonsImg/play-white.svg';
 
 const clgGetStarted = () => {
 	console.log('get started');
@@ -39,8 +40,20 @@ export const PlayButton = () => {
 	return (
 		<div className={buttonsStyles.playButton}>
 			<div className={buttonsStyles.playIcon}>
-				<a href='https://www.youtube.com/'>
+				<a href='https://www.youtube.com/watch?v=36YnV9STBqc'>
 					<img src={playBlue} alt='Play button' />
+				</a>
+			</div>
+		</div>
+	);
+};
+
+export const PlayButtonWhite = () => {
+	return (
+		<div className={buttonsStyles.playButtonWhite}>
+			<div className={buttonsStyles.playIcon}>
+				<a href='https://www.youtube.com/watch?v=36YnV9STBqc'>
+					<img src={playWhite} alt='Play button' />
 				</a>
 			</div>
 		</div>

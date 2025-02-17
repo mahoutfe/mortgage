@@ -8,7 +8,7 @@ import './../../../style/style.scss';
 import './../../../style/mixins.scss';
 import styles from './Header.module.scss';
 
-const Header = () => {
+const MainPageHeader = () => {
 	return (
 		<header className={styles.header}>
 			<div className='container container--wide'>
@@ -64,4 +64,4 @@ const Header = () => {
 	);
 };
 
-export default Header;
+export default MainPageHeader;

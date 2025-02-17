@@ -13,7 +13,6 @@ const MenuButton = () => {
 		setIsActive(!isActive);
 		// document.body.className.toggle('no-scroll');
 	};
-
 	return (
 		<div>
 			<div>

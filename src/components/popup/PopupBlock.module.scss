@@ -1,0 +1,69 @@
+/* Общий стиль для контейнера */
+.popupContainer {
+	max-width: 600px;
+	margin: 50px auto;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Стиль для верхней части блока с текстом и фото */
+.contentHeader {
+	display: flex;
+	align-items: center;
+}
+
+/* Стиль для текста слева */
+.contentHeaderText {
+	flex: 1;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #333;
+	margin-right: 20px;
+}
+
+/* Стиль для фото лектора справа */
+.lecturerPhoto {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+/* Стиль для серой линии */
+.dividerLine {
+	border-top: 1px solid #ddd;
+	margin: 20px;
+}
+
+/* Стиль для нижней части блока с текстом и кнопкой */
+.contentFooter {
+	display: flex;
+	align-items: center;
+}
+
+/* Стиль для текста "Have a question?" */
+.footerText {
+	flex: 1;
+	font-size: 14px;
+	color: #666;
+}
+
+/* Стиль для кнопки "Let's talk" */
+.talkButton {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 20px;
+	font-size: 14px;
+	cursor: pointer;
+	width: 99px;
+	height: 36px;
+}
+
+/* Ховер эффект для кнопки */
+.talkButton:hover {
+	background-color: #0056b3;
+}
