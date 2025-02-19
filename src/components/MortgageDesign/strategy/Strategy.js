@@ -1,15 +1,9 @@
 import React from 'react';
-
 import lectorsPhoto from '../../../resources/img/strategySection/backgroundImage.png';
 import { PlayButtonWhite } from '../../buttons/Buttons';
 import styles from './Strategy.module.scss';
 
 const MainPageStrategy = () => {
-	// const [isActive, setIsActive] = useState(false);
-
-	// const onClick = () => {
-	// 	setIsActive(!isActive);
-	// };
 	return (
 		<section className={styles.strategySection}>
 			<div className='container container--wide'>
@@ -21,25 +15,20 @@ const MainPageStrategy = () => {
 						It’s not just about clicking a button.
 					</div>
 					<div className={styles.strategyCards}>
-						<div className={styles.pagination}>
-							<div
-								className={`${styles.paginationDot} ${styles.paginationDotActive}`}
-							></div>
-							<div className={styles.paginationLine}></div>
-							<div className={styles.paginationDot}></div>
-							<div className={styles.paginationLine}></div>
-							<div className={styles.paginationDot}></div>
-							<div className={styles.paginationLine}></div>
-						</div>
 						<div className={styles.cardsWrapper}>
-							<div className={styles.cards}>
+							<div className={styles.pagination}>
 								<div
-									className={styles.card}
-									// className={`${styles.card} ${
-									// 	isActive ? styles.cardActive : ''
-									// }`}
-									// onClick={onClick}
-								>
+									className={`${styles.paginationDot} ${styles.paginationDotActive}`}
+								></div>
+								<div className={styles.paginationLine}></div>
+								<div className={styles.paginationDot}></div>
+								<div className={styles.paginationLine}></div>
+								<div className={styles.paginationDot}></div>
+								<div className={styles.paginationLine}></div>
+							</div>
+
+							<div className={styles.cards}>
+								<div className={styles.card}>
 									<p className={styles.cardsNumber}>01</p>
 									<h3 className={styles.cardsTitle}>Get positioned</h3>
 									<p className={styles.cardsText}>
@@ -75,7 +64,6 @@ const MainPageStrategy = () => {
 								</div>
 							</div>
 						</div>
-
 						<div className={styles.videoWrapper}>
 							<div className={`${styles.videoCard} ${styles.topVideo}`}>
 								<a
@@ -95,7 +83,6 @@ const MainPageStrategy = () => {
 									<img src={lectorsPhoto} alt='' className={styles.videoImg} />
 								</a>
 							</div>
-
 							<div className={styles.bottomVideos}>
 								<div className={`${styles.videoCard} ${styles.bottomVideo}`}>
 									<a
